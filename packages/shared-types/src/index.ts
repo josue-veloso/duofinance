@@ -151,6 +151,11 @@ export interface MonthSummary {
     total: number;
     percent: number;
   }>;
+  outstandingDebt?: Array<{
+    payerId: string;
+    receiverId: string;
+    amount: number;
+  }>;
   installments: InstallmentWithExpense[];
 }
 

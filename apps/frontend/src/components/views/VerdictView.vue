@@ -62,7 +62,7 @@
           :disabled="closing || (clearing.summary.pendingApprovalCount || 0) > 0"
           @click="closeDialogOpen = true"
         >
-          <span v-if="closing">Quitando…</span>
+          <span v-if="closing">Fechando…</span>
           <span v-else>Iniciar fechamento</span>
         </button>
       </div>

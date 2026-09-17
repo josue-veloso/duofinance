@@ -181,6 +181,7 @@ class ClearingService
             'sharedCount' => $installments->count(),
             'pendingApprovalCount' => $pendingApprovalCount,
             'topCategories' => $topCategories,
+            'outstandingDebt' => $this->getDebtStatus($couple)['outstanding'],
             'installments' => $installments->map(fn ($i) => $i->toFrontendArray(true))->values()->all(),
         ];
     }
