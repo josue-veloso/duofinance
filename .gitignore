@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Production Builds
+dist/
+public/build/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Cache & Logs
+*.log
+.phpunit.cache
+.phpunit.result.cache
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.local
+
+# Legacy / Backups
+apps/backend-node-legacy-*/

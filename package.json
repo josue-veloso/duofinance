@@ -1,0 +1,25 @@
+{
+  "name": "duofinance",
+  "version": "1.0.0",
+  "description": "DuoFinance MVP monorepo",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "npm run dev:back",
+    "backend:init:laravel": "bash scripts/init-laravel-backend.sh",
+    "dev:front": "npm run dev -w @duofinance/frontend",
+    "dev:back": "if [ -f apps/backend/artisan ]; then php apps/backend/artisan serve --host=0.0.0.0 --port=3333; else npm run dev -w @duofinance/backend; fi",
+    "dev:back:node": "npm run dev -w @duofinance/backend",
+    "build": "npm run build -ws",
+    "typecheck": "npm run typecheck -ws"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
